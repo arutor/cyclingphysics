@@ -23,9 +23,8 @@ public interface AD_ITrainer {
 	 * Characterizes the trainer power curve
 	 * @param t_resistanceLevel The level of resistance to characterize
 	 * @param t_speedPower The list of speed-power observed values
-	 * @return a boolean value indicating whether the action was properly done
 	 */
-	public boolean setPowerCurveFor(int t_resistanceLevel, List<WeightedObservedPoint> t_speedPower);
+	public void setPowerCurveFor(int t_resistanceLevel, List<WeightedObservedPoint> t_speedPower);
 	
 	/**
 	 * Calculates the power developed for the given speed at the t_resistanceLevel. In this method a
@@ -35,5 +34,5 @@ public interface AD_ITrainer {
 	 * @param t_speed The speed to know the developed power
 	 * @return Returns the power corresponding to the given speed at the given resistance level.
 	 */
-	public double getPowerForSpeed(double t_resistanceLevel, double t_speed);
+	public double getPowerForSpeed(int t_resistanceLevel, double t_speed);
 }
